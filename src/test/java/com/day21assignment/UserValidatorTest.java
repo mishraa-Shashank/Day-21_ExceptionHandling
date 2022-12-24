@@ -7,31 +7,31 @@ public class UserValidatorTest {
     UserValidator validator = new UserValidator();
 
     @Test
-    public void givenFirstName_WhenProper_ShouldReturnTrue() {
-        boolean result = validator.validateFirstName("Shashank");
+    public void givenFirstName_WhenProper_ShouldReturnTrue() throws MyCustomException {
+        boolean result = validator.validateFirstName("shashank");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void givenLastName_WhenProper_ShouldReturnTrue() {
+    public void givenLastName_WhenProper_ShouldReturnTrue() throws MyCustomException {
         boolean result = validator.validateLastName("Mishra");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void givenEmailAddress_WhenProper_ShouldReturnTrue() {
+    public void givenEmailAddress_WhenProper_ShouldReturnTrue() throws MyCustomException {
         boolean result = validator.validateEmailAddress("abc@yahoo.com");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void givenMobileNumber_WhenProper_ShouldReturnTrue() {
-        boolean result = validator.validateMobileNumber("+91 9980199898");
+    public void givenMobileNumber_WhenProper_ShouldReturnTrue() throws MyCustomException {
+        boolean result = validator.validateMobileNumber("+91 99801998");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void givenPassword_WhenProper_ShouldReturnTrue() {
+    public void givenPassword_WhenProper_ShouldReturnTrue() throws MyCustomException {
         boolean result = validator.validatePassword("Shashank123@123");
         Assert.assertTrue(result);
     }
