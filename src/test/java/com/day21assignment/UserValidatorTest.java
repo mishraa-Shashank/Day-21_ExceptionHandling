@@ -8,7 +8,7 @@ public class UserValidatorTest {
 
     @Test
     public void givenFirstName_WhenProper_ShouldReturnTrue() throws MyCustomException {
-        boolean result = validator.validateFirstName("shashank");
+        boolean result = validator.validateFirstName("Shashank");
         Assert.assertTrue(result);
     }
 
@@ -20,13 +20,13 @@ public class UserValidatorTest {
 
     @Test
     public void givenEmailAddress_WhenProper_ShouldReturnTrue() throws MyCustomException {
-        boolean result = validator.validateEmailAddress("abc@yahoo.com");
+        boolean result = validator.validateEmailAddress("abc100@yahoo.com");
         Assert.assertTrue(result);
     }
 
     @Test
     public void givenMobileNumber_WhenProper_ShouldReturnTrue() throws MyCustomException {
-        boolean result = validator.validateMobileNumber("+91 99801998");
+        boolean result = validator.validateMobileNumber("+91 9980199801");
         Assert.assertTrue(result);
     }
 
